@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HackForge | Universal Multi-AI Intelligence Platform</title>
+  <meta name="description" content="HackForge: Universal Multi-AI Intelligence & Comparison Platform.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2.5L27 7.5V17.5C27 23.5 22 28.5 16 30.5C10 28.5 5 23.5 5 17.5V7.5L16 2.5Z' fill='%2309090b' stroke='%2300F2FE' stroke-width='2'/><path d='M10 11H22M16 11V23M11 17H21M13 23H19' stroke='%23F97316' stroke-width='2'/></svg>">
+
+  <!-- Google Fonts: Syne, Space Grotesk, Outfit, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Markdown, Confetti, and Lucide Icons CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Blurred Mesh Gradient Glowing Blobs & Flowing Cyber Wave Canvas -->
+  <div class="ambient-mesh-canvas">
+    <div class="mesh-blob blob-indigo"></div>
+    <div class="mesh-blob blob-violet"></div>
+    <div class="mesh-blob blob-cyan"></div>
+    <div class="mesh-blob blob-azure"></div>
+    
+    <!-- Flowing SVG Topographic Wave Lines -->
+    <svg class="topo-wave-canvas" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path class="wave-path wave-path-1" d="M-100 200 C 300 450, 600 50, 1100 350 C 1300 450, 1500 200, 1600 300" stroke="url(#waveGrad1)" stroke-width="2.5" stroke-dasharray="8 12" opacity="0.45"/>
+      <path class="wave-path wave-path-2" d="M-100 450 C 400 250, 800 650, 1200 400 C 1400 300, 1550 500, 1650 420" stroke="url(#waveGrad2)" stroke-width="2" opacity="0.35"/>
+      <path class="wave-path wave-path-3" d="M-50 700 C 250 500, 750 850, 1150 600 C 1350 500, 1500 750, 1600 650" stroke="url(#waveGrad3)" stroke-width="1.8" stroke-dasharray="14 8" opacity="0.4"/>
+      <defs>
+        <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.8"/>
+          <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#EC4899" stop-opacity="0.8"/>
+        </linearGradient>
+        <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#10B981" stop-opacity="0.7"/>
+          <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.8"/>
+        </linearGradient>
+        <linearGradient id="waveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.6"/>
+          <stop offset="50%" stop-color="#EC4899" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.7"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Tactile Tech Grid & Micro-Dot Texture Layer -->
+    <div class="ambient-grid-layer"></div>
+
+    <!-- Organic Film Grain Noise Overlay -->
+    <div class="ambient-noise-layer"></div>
+
+    <!-- Atmospheric Floating Stardust Particles -->
+    <div class="stardust-particles">
+      <span class="dust-particle p1"></span>
+      <span class="dust-particle p2"></span>
+      <span class="dust-particle p3"></span>
+      <span class="dust-particle p4"></span>
+      <span class="dust-particle p5"></span>
+      <span class="dust-particle p6"></span>
+    </div>
+  </div>
+
+  <!-- ================= HIGH-TECH WORKSPACE BUFFERING TRANSITION OVERLAY ================= -->
+  <div class="workspace-transition-overlay" id="workspace-transition-overlay" style="display: none;">
+    <div class="transition-modal-card">
+      
+      <!-- Quantum Neural Spinner Orb -->
+      <div class="neural-spinner-wrapper">
+        <div class="neural-spinner-ring outer-ring"></div>
+        <div class="neural-spinner-ring middle-ring"></div>
+        <div class="neural-spinner-ring inner-ring"></div>
+        <div class="neural-spinner-core">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <path d="M16 2.5L27 7.5V17.5C27 23.5 22 28.5 16 30.5C10 28.5 5 23.5 5 17.5V7.5L16 2.5Z" stroke="#00F2FE" stroke-width="2.2" fill="rgba(15, 23, 42, 0.9)"/>
+            <path d="M10 11H22M16 11V23M11 17H21M13 23H19M16 6.5L13.5 10H18.5L16 6.5Z" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Title & Live Status Log -->
+      <div class="transition-text-content">
+        <h3 class="transition-title">Entering AI Studio</h3>
+        <p class="transition-status-log" id="transition-status-text">Connecting to Universal AI Gateway...</p>
+      </div>
+
+      <!-- High-Tech Neon Progress Bar & Percentage -->
+      <div class="transition-progress-container">
+        <div class="transition-progress-bar">
+          <div class="transition-progress-fill" id="transition-progress-fill"></div>
+          <div class="transition-progress-glow" id="transition-progress-glow"></div>
+        </div>
+        <div class="transition-meta-row">
+          <span class="transition-chip">✦ SIH 2026 AI MATRIX</span>
+          <span class="transition-percent-text" id="transition-percent-text">0%</span>
+        </div>
+      </div>
+
+      <!-- Active Model Sync Indicators -->
+      <div class="transition-models-sync">
+        <span class="sync-pill"><span class="sync-dot" style="background: #f59e0b;"></span> Claude 3.5</span>
+        <span class="sync-pill"><span class="sync-dot" style="background: #10b981;"></span> GPT-4o</span>
+        <span class="sync-pill"><span class="sync-dot" style="background: #6366f1;"></span> Gemini 2.0</span>
+        <span class="sync-pill"><span class="sync-dot" style="background: #a855f7;"></span> DeepSeek R1</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= AUTHENTICATION FULL-SCREEN OVERLAY ================= -->
+  <div class="auth-fullscreen-overlay hidden" id="auth-overlay">
+    <div class="auth-card">
+      <button class="auth-close-btn" id="auth-close-btn" type="button" title="Close and continue as guest">
+        <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+      </button>
+      <div class="auth-header">
+        <div class="auth-logo hackforge-logo-glow">
+          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2.5L27 7.5V17.5C27 23.5 22 28.5 16 30.5C10 28.5 5 23.5 5 17.5V7.5L16 2.5Z" stroke="#00F2FE" stroke-width="2.2" fill="rgba(15, 23, 42, 0.8)"/>
+            <path d="M10 11H22M16 11V23M11 17H21M13 23H19M16 6.5L13.5 10H18.5L16 6.5Z" stroke="#F97316" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2 class="auth-title" id="auth-title">Welcome to HackForge</h2>
+        <p class="auth-subtitle" id="auth-subtitle">Universal Multi-AI Intelligence Platform • Team HackForge</p>
+      </div>
+
+      <!-- Auth Tabs Switcher -->
+      <div class="auth-tabs-pill">
+        <button class="auth-tab-btn active" id="tab-signin-btn">Sign In</button>
+        <button class="auth-tab-btn" id="tab-signup-btn">Create Account</button>
+      </div>
+
+      <!-- Feedback Alert Banner -->
+      <div class="auth-feedback-banner" id="auth-feedback-banner"></div>
+
+      <!-- SIGN IN FORM -->
+      <form class="auth-form" id="signin-form">
+        <div class="auth-field-group">
+          <label class="auth-label">Email address</label>
+          <div class="auth-input-wrapper">
+            <i data-lucide="mail" style="width: 15px; height: 15px;"></i>
+            <input type="email" id="signin-email" class="auth-input" placeholder="alex@linear.app" required autofocus>
+          </div>
+        </div>
+
+        <div class="auth-field-group">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label class="auth-label">Password</label>
+            <a href="#" id="forgot-password-link" style="font-size: 0.72rem; color: var(--text-muted); text-decoration: none;">Forgot?</a>
+          </div>
+          <div class="auth-input-wrapper">
+            <i data-lucide="lock" style="width: 15px; height: 15px;"></i>
+            <input type="password" id="signin-password" class="auth-input" placeholder="••••••••••••" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-auth-submit" id="btn-signin-submit">
+          <span>Sign In to Workspace</span>
+          <i data-lucide="arrow-right" style="width: 15px; height: 15px;"></i>
+        </button>
+      </form>
+
+      <!-- SIGN UP FORM (Initially Hidden) -->
+      <form class="auth-form" id="signup-form" style="display: none;">
+        <div class="auth-field-group">
+          <label class="auth-label">Full name</label>
+          <div class="auth-input-wrapper">
+            <i data-lucide="user" style="width: 15px; height: 15px;"></i>
+            <input type="text" id="signup-name" class="auth-input" placeholder="Alex Vance" required>
+          </div>
+        </div>
+
+        <div class="auth-field-group">
+          <label class="auth-label">Work email</label>
+          <div class="auth-input-wrapper">
+            <i data-lucide="mail" style="width: 15px; height: 15px;"></i>
+            <input type="email" id="signup-email" class="auth-input" placeholder="alex@company.com" required>
+          </div>
+        </div>
+
+        <div class="auth-field-group">
+          <label class="auth-label">Password (min 6 characters)</label>
+          <div class="auth-input-wrapper">
+            <i data-lucide="lock" style="width: 15px; height: 15px;"></i>
+            <input type="password" id="signup-password" class="auth-input" placeholder="••••••••••••" required minlength="6">
+          </div>
+        </div>
+
+        <button type="submit" class="btn-auth-submit" id="btn-signup-submit">
+          <span>Create Free Account</span>
+          <i data-lucide="sparkles" style="width: 15px; height: 15px;"></i>
+        </button>
+      </form>
+
+      <div class="auth-divider">Or continue with</div>
+
+      <div class="social-auth-grid">
+        <button class="btn-social" id="btn-auth-github" type="button">
+          <i data-lucide="github" style="width: 14px; height: 14px;"></i> GitHub
+        </button>
+        <button class="btn-social" id="btn-auth-google" type="button">
+          <i data-lucide="globe" style="width: 14px; height: 14px;"></i> Google
+        </button>
+      </div>
+
+      <!-- Quick 1-Click Demo Login Button -->
+      <button class="btn-demo-quick" id="btn-demo-login" type="button">
+        <i data-lucide="zap" style="width: 14px; height: 14px;"></i> 1-Click Demo Sign In (Alex Vance)
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ================= 0. HACKFORGE LANDING PAGE & INFOGRAPHIC ================= -->
+  <div class="landing-view-wrapper" id="landing-view">
+    
+    <!-- Top Sticky Floating Glassmorphic Landing Header -->
+    <header class="landing-header">
+      <div class="landing-header-glow-rim"></div>
+      <div class="landing-header-container">
+        <a href="#landing" class="landing-brand-wrapper">
+          <div class="brand-icon-box hackforge-logo-box">
+            <svg viewBox="0 0 32 32" width="20" height="20" fill="none">
+              <path d="M16 2.5L27 7.5V17.5C27 23.5 22 28.5 16 30.5C10 28.5 5 23.5 5 17.5V7.5L16 2.5Z" stroke="#00F2FE" stroke-width="2.2" fill="rgba(15, 23, 42, 0.7)"/>
+              <path d="M10 11H22M16 11V23M11 17H21M13 23H19M16 6.5L13.5 10H18.5L16 6.5Z" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="brand-text hackforge-brand-text">HackForge<span class="brand-accent-tag">AI</span></span>
+        </a>
+
+        <!-- Center Pill Nav Menu -->
+        <nav class="nav-center-pill">
+          <a href="#features" class="nav-pill-link">
+            <i data-lucide="sparkles" style="width: 13px; height: 13px;"></i>
+            <span>Features</span>
+          </a>
+          <a href="#architecture" class="nav-pill-link">
+            <i data-lucide="cpu" style="width: 13px; height: 13px;"></i>
+            <span>Architecture</span>
+          </a>
+          <a href="#impact" class="nav-pill-link">
+            <i data-lucide="award" style="width: 13px; height: 13px;"></i>
+            <span>Impact & SIH</span>
+          </a>
+          <a href="#enterprise" class="nav-pill-link">
+            <i data-lucide="building-2" style="width: 13px; height: 13px;"></i>
+            <span>For Business</span>
+          </a>
+          <a href="#faqs" class="nav-pill-link">
+            <i data-lucide="help-circle" style="width: 13px; height: 13px;"></i>
+            <span>FAQs</span>
+          </a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="nav-right-actions">
+          <div class="nav-status-badge">
+            <span class="nav-status-dot"></span>
+            <span>4x AI Engine Active</span>
+          </div>
+          <button class="btn-nav-login" onclick="window.showWorkspace()">
+            <span>Launch Studio</span>
+            <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="landing-hero-section" id="landing-hero">
+      <div class="landing-hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-left-column">
+          <div class="hero-badge-pill">
+            <span class="badge-sparkle">✦</span>
+            <span>Team HackForge (T30) • SIH 2026 Problem PS12</span>
+          </div>
+
+          <h1 class="hero-main-title">
+            World’s Most<br/>
+            Powerful AIs.<br/>
+            <span class="hero-gradient-text">One Subscription.</span>
+          </h1>
+
+          <p class="hero-description">
+            Stop juggling tabs and subscriptions — HackForge gives you access to all best-in-class frontier AI models in a unified parallel workspace. Query ChatGPT, Gemini, Claude, and DeepSeek simultaneously with real-time streaming comparison.
+          </p>
+
+          <div class="hero-cta-wrapper">
+            <button class="btn-hero-primary" onclick="window.showWorkspace()">
+              <span>Get Started Now</span>
+              <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+            </button>
+            <span class="hero-subtext">Experience smarter & more accurate answers • 5 Free Trial Chats</span>
+          </div>
+        </div>
+
+        <!-- Right Hero Column: Interactive Device Mockup (Screenshot Match) -->
+        <div class="hero-right-column">
+          <div class="hero-mockup-window" onclick="window.showWorkspace()" title="Click to launch interactive workspace">
+            <div class="mockup-header-bar">
+              <div class="mockup-traffic-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="mockup-header-title">HackForge Multi-AI Arena • Live Comparison</div>
+              <span class="mockup-badge-live">● LIVE PREVIEW</span>
+            </div>
+
+            <div class="mockup-columns-container">
+              <!-- Mock Column 1: ChatGPT 5 -->
+              <div class="mockup-col col-gpt">
+                <div class="mockup-col-header">
+                  <div class="mockup-model-badge" style="color: #10a37f;">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M20.5 9.5c-.3-1.8-1.5-3.3-3.2-3.9-1.2-.4-2.5-.3-3.6.3-.5-.7-1.3-1.3-2.1-1.6-1.9-.8-4.2-.2-5.4 1.4-.7.9-1 2-1 3.1-.9.2-1.8.8-2.4 1.6-1.2 1.7-1.2 4 0 5.7.5.7 1.3 1.3 2.1 1.6 1.9.8 4.2.2 5.4-1.4.7-.9 1-2 1-3.1.9-.2 1.8-.8 2.4-1.6 1.2-1.7 1.2-4 0-5.7z"/></svg>
+                    <span>ChatGPT 5</span>
+                  </div>
+                  <span class="mockup-switch on"></span>
+                </div>
+                <div class="mockup-bubble user">Which model is best for system design?</div>
+                <div class="mockup-bubble bot">
+                  <strong>OpenAI:</strong> Excellent for microservices, API contracts, and domain-driven design patterns.
+                </div>
+              </div>
+
+              <!-- Mock Column 2: Gemini 2.5 Pro -->
+              <div class="mockup-col col-gemini">
+                <div class="mockup-col-header">
+                  <div class="mockup-model-badge" style="color: #4285f4;">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/></svg>
+                    <span>Gemini 2.5 Pro</span>
+                  </div>
+                  <span class="mockup-switch on"></span>
+                </div>
+                <div class="mockup-bubble user">Which model is best for system design?</div>
+                <div class="mockup-bubble bot">
+                  <strong>Google AI:</strong> Superior for large-scale multimodal codebase ingestion and 1M token context logic.
+                </div>
+              </div>
+
+              <!-- Mock Column 3: DeepSeek R1 -->
+              <div class="mockup-col col-deepseek">
+                <div class="mockup-col-header">
+                  <div class="mockup-model-badge" style="color: #3b82f6;">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 3a9 9 0 0 0-9 9 9 9 0 0 0 3.37 7l.13.1a4.5 4.5 0 0 1 1.5 3.4v.5h6v-.5a4.5 4.5 0 0 1 1.5-3.4l.13-.1A9 9 0 0 0 21 12a9 9 0 0 0-9-9z"/></svg>
+                    <span>DeepSeek</span>
+                  </div>
+                  <span class="mockup-switch on"></span>
+                </div>
+                <div class="mockup-bubble user">Which model is best for system design?</div>
+                <div class="mockup-bubble bot">
+                  <strong>DeepSeek:</strong> Ideal for mathematical verification, lockless algorithms, and edge-case formal proofs.
+                </div>
+              </div>
+            </div>
+
+            <div class="mockup-bottom-dock">
+              <span class="mockup-input-text">Ask anything across all models simultaneously...</span>
+              <button class="mockup-send-icon" type="button"><i data-lucide="arrow-up" style="width: 13px; height: 13px;"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SCI-FI POSTER INFOGRAPHIC: "QUANTUM NEURAL DISPATCH MATRIX" -->
+    <section class="landing-infographic-section" id="architecture">
+      
+      <!-- Poster Header -->
+      <div class="poster-meta-header">
+        <div class="poster-tag-pill">
+          <span class="pulse-beacon"></span>
+          <span>SYSTEM SPECIFICATION // v2.6 HYPER-MATRIX</span>
+        </div>
+        <div class="poster-coordinates">COORDS: 28.6139° N, 77.2090° E • PROTOCOL 0xHF_NEURAL</div>
+      </div>
+
+      <div class="section-header-center">
+        <div class="section-eyebrow">NEURAL DISPATCH ARCHITECTURE</div>
+        <h2 class="section-title-large poster-hero-title">Pick The Best Characteristics Of Each AI Model</h2>
+        <p class="section-subtitle">No single model wins at everything. HackForge unifies each LLM's distinct specialty into a central quantum intelligence board.</p>
+      </div>
+
+      <!-- Monumental Poster Canvas -->
+      <div class="nano-poster-board">
+        
+        <!-- Background Vector HUD Grid & Technical Crosshairs -->
+        <div class="poster-hud-overlay">
+          <div class="hud-crosshair top-left">+</div>
+          <div class="hud-crosshair top-right">+</div>
+          <div class="hud-crosshair bottom-left">+</div>
+          <div class="hud-crosshair bottom-right">+</div>
+        </div>
+
+        <!-- STAGE 01: INGESTION INPUT TELEMETRY -->
+        <div class="poster-stage-banner">
+          <div class="stage-badge">PHASE 01</div>
+          <span class="stage-title">UNIFIED PROMPT INGESTION BUS</span>
+          <span class="stage-metric">PAYLOAD: ZERO-LATENCY MULTICAST</span>
+        </div>
+
+        <!-- STAGE 02: CENTRAL QUANTUM REACTOR HUB & LASER BUS -->
+        <div class="poster-core-reactor-zone">
+          
+          <!-- Animated Laser Conduits SVG -->
+          <svg class="laser-bus-svg" viewBox="0 0 1000 120" preserveAspectRatio="none">
+            <line x1="500" y1="20" x2="100" y2="120" class="laser-beam beam-1" />
+            <line x1="500" y1="20" x2="300" y2="120" class="laser-beam beam-2" />
+            <line x1="500" y1="20" x2="500" y2="120" class="laser-beam beam-3" />
+            <line x1="500" y1="20" x2="700" y2="120" class="laser-beam beam-4" />
+            <line x1="500" y1="20" x2="900" y2="120" class="laser-beam beam-5" />
+          </svg>
+
+          <!-- Rotating Hologram Core -->
+          <div class="reactor-core-orb">
+            <div class="reactor-ring ring-outer"></div>
+            <div class="reactor-ring ring-middle"></div>
+            <div class="reactor-center-box">
+              <div class="brand-icon-box hackforge-logo-box poster-core-icon">
+                <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+                  <path d="M16 2.5L27 7.5V17.5C27 23.5 22 28.5 16 30.5C10 28.5 5 23.5 5 17.5V7.5L16 2.5Z" stroke="#00F2FE" stroke-width="2.5" fill="rgba(15, 23, 42, 0.9)"/>
+                  <path d="M10 11H22M16 11V23M11 17H21M13 23H19M16 6.5L13.5 10H18.5L16 6.5Z" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="reactor-label-badge">HACKFORGE QUANTUM ROUTER</div>
+          </div>
+
+        </div>
+
+        <!-- STAGE 03: 5 HIGH-TECH MODEL TERMINALS WITH METRIC GAUGES -->
+        <div class="poster-terminals-grid">
+          
+          <!-- Terminal 1: ChatGPT 5 -->
+          <div class="poster-terminal-card term-gpt">
+            <div class="term-status-strip">
+              <span class="term-dot dot-emerald"></span>
+              <span class="term-code">ENGINE: GPT_5.0_PRO</span>
+              <span class="term-val">SWE-92.4%</span>
+            </div>
+            
+            <div class="term-main-header" style="color: #10b981;">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.5 9.5c-.3-1.8-1.5-3.3-3.2-3.9-1.2-.4-2.5-.3-3.6.3-.5-.7-1.3-1.3-2.1-1.6-1.9-.8-4.2-.2-5.4 1.4-.7.9-1 2-1 3.1-.9.2-1.8.8-2.4 1.6-1.2 1.7-1.2 4 0 5.7.5.7 1.3 1.3 2.1 1.6 1.9.8 4.2.2 5.4-1.4.7-.9 1-2 1-3.1.9-.2 1.8-.8 2.4-1.6 1.2-1.7 1.2-4 0-5.7z"/></svg>
+              <div>
+                <h3 class="term-model-name">ChatGPT 5</h3>
+                <span class="term-provider">OpenAI Frontier</span>
+              </div>
+            </div>
+
+            <div class="term-trait-tag">⚡ Multimodal Generalist & Coding</div>
+            <p class="term-desc">Best for OpenAPI schema generators, microservices boilerplate, and structured JSON output.</p>
+
+            <div class="term-meter-box">
+              <div class="meter-info"><span>Speed & Throughput</span><strong>85 tok/s</strong></div>
+              <div class="meter-track"><div class="meter-bar" style="width: 85%; background: linear-gradient(90deg, #10b981, #34d399);"></div></div>
+            </div>
+          </div>
+
+          <!-- Terminal 2: Gemini 2.5 Pro -->
+          <div class="poster-terminal-card term-gemini">
+            <div class="term-status-strip">
+              <span class="term-dot dot-cyan"></span>
+              <span class="term-code">ENGINE: GEMINI_2.5_EXP</span>
+              <span class="term-val">1M CONTEXT</span>
+            </div>
+            
+            <div class="term-main-header" style="color: #38bdf8;">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/></svg>
+              <div>
+                <h3 class="term-model-name">Gemini 2.5 Pro</h3>
+                <span class="term-provider">Google DeepMind</span>
+              </div>
+            </div>
+
+            <div class="term-trait-tag">🧠 1M Context & Ultra-Fast Streaming</div>
+            <p class="term-desc">Ingests massive repos, 100+ page technical PDFs, and hours of video with zero context degradation.</p>
+
+            <div class="term-meter-box">
+              <div class="meter-info"><span>Speed & Throughput</span><strong>115 tok/s</strong></div>
+              <div class="meter-track"><div class="meter-bar" style="width: 96%; background: linear-gradient(90deg, #38bdf8, #00f2fe);"></div></div>
+            </div>
+          </div>
+
+          <!-- Terminal 3: DeepSeek R1 -->
+          <div class="poster-terminal-card term-deepseek">
+            <div class="term-status-strip">
+              <span class="term-dot dot-azure"></span>
+              <span class="term-code">ENGINE: DEEPSEEK_R1_MATH</span>
+              <span class="term-val">COT VERIFIED</span>
+            </div>
+            
+            <div class="term-main-header" style="color: #60a5fa;">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3a9 9 0 0 0-9 9 9 9 0 0 0 3.37 7l.13.1a4.5 4.5 0 0 1 1.5 3.4v.5h6v-.5a4.5 4.5 0 0 1 1.5-3.4l.13-.1A9 9 0 0 0 21 12a9 9 0 0 0-9-9z"/></svg>
+              <div>
+                <h3 class="term-model-name">DeepSeek R1</h3>
+                <span class="term-provider">DeepSeek AI</span>
+              </div>
+            </div>
+
+            <div class="term-trait-tag">🔬 Chain-of-Thought & Mathematical Proofs</div>
+            <p class="term-desc">Explicit step-by-step reasoning tokens for algorithms, competitive coding, and formal logic verification.</p>
+
+            <div class="term-meter-box">
+              <div class="meter-info"><span>Reasoning Depth</span><strong>98.9% Proof</strong></div>
+              <div class="meter-track"><div class="meter-bar" style="width: 92%; background: linear-gradient(90deg, #3b82f6, #818cf8);"></div></div>
+            </div>
+          </div>
+
+          <!-- Terminal 4: Claude 3.5 Sonnet -->
+          <div class="poster-terminal-card term-claude">
+            <div class="term-status-strip">
+              <span class="term-dot dot-amber"></span>
+              <span class="term-code">ENGINE: CLAUDE_SONNET_3.5</span>
+              <span class="term-val">ARCH-99.1%</span>
+            </div>
+            
+            <div class="term-main-header" style="color: #fbbf24;">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5L4.5 9.75 2 11l10 5 10-5-2.5-1.25L12 13.5zM2 15l10 5 10-5-2.5-1.25L12 17.5 4.5 13.75 2 15z"/></svg>
+              <div>
+                <h3 class="term-model-name">Claude 3.5 Sonnet</h3>
+                <span class="term-provider">Anthropic</span>
+              </div>
+            </div>
+
+            <div class="term-trait-tag">🏛️ Systems Architecture & Nuanced Artifacts</div>
+            <p class="term-desc">Produces clean refactored architectures, modular UI components, and human-like precision text.</p>
+
+            <div class="term-meter-box">
+              <div class="meter-info"><span>Code Quality</span><strong>93.7% Zero-Err</strong></div>
+              <div class="meter-track"><div class="meter-bar" style="width: 94%; background: linear-gradient(90deg, #f59e0b, #fbbf24);"></div></div>
+            </div>
+          </div>
+
+          <!-- Terminal 5: Perplexity Sonar -->
+          <div class="poster-terminal-card term-perplexity">
+            <div class="term-status-strip">
+              <span class="term-dot dot-cyan"></span>
+              <span class="term-code">ENGINE: SONAR_ONLINE_PRO</span>
+              <span class="term-val">LIVE WEB</span>
+            </div>
+            
+            <div class="term-main-header" style="color: #06b6d4;">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A8 8 0 0 1 4.07 11H5a1 1 0 0 1 0-2h-.93A8 8 0 0 1 11 4.07V5a1 1 0 0 1 2 0v-.93A8 8 0 0 1 19.93 11H19a1 1 0 0 1 0 2h.93A8 8 0 0 1 13 16.93z"/></svg>
+              <div>
+                <h3 class="term-model-name">Perplexity Sonar</h3>
+                <span class="term-provider">Perplexity AI</span>
+              </div>
+            </div>
+
+            <div class="term-trait-tag">🌐 Real-Time Search & Verified Citations</div>
+            <p class="term-desc">Live internet grounding with direct clickable source references and zero outdated cutoff errors.</p>
+
+            <div class="term-meter-box">
+              <div class="meter-info"><span>Fact Verification</span><strong>98.4% Cited</strong></div>
+              <div class="meter-track"><div class="meter-bar" style="width: 90%; background: linear-gradient(90deg, #06b6d4, #22d3ee);"></div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- STAGE 04: AUTOMATED CROSS-MODEL CONSENSUS SYNTHESIS FOOTER -->
+        <div class="poster-synthesis-footer">
+          <div class="synthesis-badge-pill">
+            <i data-lucide="shield-check" style="width: 16px; height: 16px; color: #10b981;"></i>
+            <span>PHASE 04: REAL-TIME CONSENSUS SYNTHESIZER</span>
+          </div>
+          <p class="synthesis-text">
+            HackForge automatically runs cross-model validation — flagging contradictions, highlighting hallucinated facts, and delivering the single most optimal solution to your engineering workflow.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. HOW IT WORKS & CORE BENEFITS -->
+    <section class="landing-features-section" id="features">
+      
+      <!-- Ambient Multi-Gradient Glow Behind Cards -->
+      <div class="benefits-ambient-glow-wrapper">
+        <div class="card-glow-blob blob-emerald"></div>
+        <div class="card-glow-blob blob-blue"></div>
+        <div class="card-glow-blob blob-purple"></div>
+        <div class="card-glow-blob blob-orange"></div>
+      </div>
+
+      <div class="section-header-center">
+        <div class="section-eyebrow">CORE CAPABILITIES</div>
+        <h2 class="section-title-large">Engineered for Maximum Developer Velocity</h2>
+        <p class="section-subtitle">How HackForge eliminates AI context fragmentation and slashes your AI expenses in half.</p>
+      </div>
+
+      <div class="benefits-cards-grid">
+        
+        <div class="benefit-card card-broadcast">
+          <div class="benefit-card-glow-layer"></div>
+          <div class="benefit-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+            <i data-lucide="split" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 class="benefit-card-title">Parallel Broadcast Engine</h3>
+          <p class="benefit-card-desc">Type your prompt once. HackForge automatically fans out the query concurrently to ChatGPT, Gemini, DeepSeek, and Claude with zero queuing delay.</p>
+          <div class="benefit-bottom-accent accent-emerald"></div>
+        </div>
+
+        <div class="benefit-card card-consensus">
+          <div class="benefit-card-glow-layer"></div>
+          <div class="benefit-icon-box" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6;">
+            <i data-lucide="columns" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 class="benefit-card-title">Side-by-Side Consensus Hub</h3>
+          <p class="benefit-card-desc">Instantly spot hallucinations, compare code implementations, and evaluate speed vs accuracy across models in dedicated synchronized columns.</p>
+          <div class="benefit-bottom-accent accent-blue"></div>
+        </div>
+
+        <div class="benefit-card card-focus">
+          <div class="benefit-card-glow-layer"></div>
+          <div class="benefit-icon-box" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6;">
+            <i data-lucide="maximize-2" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 class="benefit-card-title">Deep Focus & Switch Back</h3>
+          <p class="benefit-card-desc">Found the winning model? Click the focus icon to continue in a distraction-free single chat, then toggle back to comparison mode whenever you want.</p>
+          <div class="benefit-bottom-accent accent-purple"></div>
+        </div>
+
+        <div class="benefit-card card-unified">
+          <div class="benefit-card-glow-layer"></div>
+          <div class="benefit-icon-box" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">
+            <i data-lucide="wallet" style="width: 22px; height: 22px;"></i>
+          </div>
+          <h3 class="benefit-card-title">One Unified Plan</h3>
+          <p class="benefit-card-desc">No more paying $20/month separately for OpenAI, Anthropic, and Google. Access every state-of-the-art model under one unified workspace.</p>
+          <div class="benefit-bottom-accent accent-orange"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. SIH 2026 IMPACT & MULTI-DIMENSIONAL BENEFITS BOARD -->
+    <section class="landing-impact-section" id="impact">
+      <div class="impact-container-board">
+        
+        <!-- SIH 2026 HackForge Master Title Header -->
+        <div class="sih-impact-header-row">
+          <div class="sih-brand-badge-pill">
+            <span class="sih-hackforge-oval">HackForge</span>
+          </div>
+
+          <div class="sih-center-title-box">
+            <h2 class="sih-main-title">IMPACT AND BENEFITS</h2>
+            <p class="sih-sub-title">Smart India Hackathon 2026 • Universal AI Intelligence Platform</p>
+          </div>
+
+          <div class="sih-official-logo-box">
+            <div class="sih-tricolor-brain">
+              <svg viewBox="0 0 40 40" width="34" height="34" fill="none">
+                <circle cx="20" cy="20" r="18" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <path d="M14 12C14 12 11 15 11 20C11 25 14 28 14 28" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                <path d="M26 12C26 12 29 15 29 20C29 25 26 28 26 28" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="20" cy="20" r="5" fill="#3B82F6" opacity="0.8"/>
+                <path d="M20 10V15M20 25V30M10 20H15M25 20H30" stroke="#FFFFFF" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="sih-text-wrap">
+              <span class="sih-tag-top">SMART INDIA</span>
+              <span class="sih-tag-mid">HACKATHON</span>
+              <span class="sih-tag-year">2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIH 2026 OFFICIAL MISSION DOSSIER & PROBLEM SPECIFICATION HUD -->
+        <div class="sih-mission-docket">
+          <div class="docket-hud-frame">
+            <span class="docket-crosshair top-left">+</span>
+            <span class="docket-crosshair top-right">+</span>
+            <span class="docket-crosshair bottom-left">+</span>
+            <span class="docket-crosshair bottom-right">+</span>
+          </div>
+
+          <div class="docket-inner-layout">
+            
+            <!-- Left Info Grid -->
+            <div class="docket-meta-grid">
+              
+              <div class="docket-cell cell-ps-id">
+                <div class="docket-cell-label">PROBLEM STATEMENT ID</div>
+                <div class="docket-cell-val val-ps-id">
+                  <span class="ps-glow-badge">PS12</span>
+                  <span class="ps-category-pill">Software</span>
+                </div>
+              </div>
+
+              <div class="docket-cell cell-ps-title">
+                <div class="docket-cell-label">PROBLEM STATEMENT TITLE</div>
+                <div class="docket-cell-val val-ps-title">Universal AI Chat Interface</div>
+              </div>
+
+              <div class="docket-cell cell-theme">
+                <div class="docket-cell-label">OFFICIAL SIH THEME</div>
+                <div class="docket-cell-val val-theme">
+                  <span class="theme-glow-dot">✦</span>
+                  <span>One Platform, Infinite Intelligence</span>
+                </div>
+              </div>
+
+              <div class="docket-cell cell-team-id">
+                <div class="docket-cell-label">TEAM IDENTIFIER</div>
+                <div class="docket-cell-val val-team-id">
+                  <span class="team-id-badge">T30</span>
+                </div>
+              </div>
+
+              <div class="docket-cell cell-team-name">
+                <div class="docket-cell-label">TEAM NAME</div>
+                <div class="docket-cell-val val-team-name">
+                  <span class="team-name-text">HACKFORGE</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Holographic Emblem Box -->
+            <div class="docket-emblem-box">
+              <div class="docket-hologram-rings">
+                <span class="holo-ring holo-outer"></span>
+                <span class="holo-ring holo-inner"></span>
+              </div>
+              
+              <div class="docket-brain-bulb-visual">
+                <svg viewBox="0 0 100 100" width="85" height="85" fill="none">
+                  <!-- Bulb Base Glow -->
+                  <path d="M40 76H60M43 82H57M46 88H54" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"/>
+                  <!-- Saffron Left Hemisphere -->
+                  <path d="M47 30C40 30 32 36 32 46C32 55 38 62 44 68L47 70V30Z" fill="url(#saffronGrad)" stroke="#F97316" stroke-width="1.8"/>
+                  <!-- Emerald Right Digital Hemisphere -->
+                  <path d="M53 30C60 30 68 36 68 46C68 55 62 62 56 68L53 70V30Z" fill="url(#emeraldGrad)" stroke="#10B981" stroke-width="1.8"/>
+                  <!-- Center Filament Energy Arc -->
+                  <line x1="50" y1="20" x2="50" y2="72" stroke="#00F2FE" stroke-width="2" stroke-dasharray="3 3"/>
+                  <!-- Radiating Tech Rays -->
+                  <line x1="50" y1="10" x2="50" y2="16" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="20" y1="46" x2="26" y2="46" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="74" y1="46" x2="80" y2="46" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="29" y1="25" x2="34" y2="30" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="66" y1="30" x2="71" y2="25" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                  <defs>
+                    <linearGradient id="saffronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="rgba(249, 115, 22, 0.4)"/>
+                      <stop offset="100%" stop-color="rgba(234, 88, 12, 0.1)"/>
+                    </linearGradient>
+                    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="rgba(16, 185, 129, 0.4)"/>
+                      <stop offset="100%" stop-color="rgba(5, 150, 105, 0.1)"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <div class="docket-sih-tagline">
+                <span class="sih-tagline-main">SMART INDIA HACKATHON</span>
+                <span class="sih-tagline-sub">NATIONAL GRAND FINALE 2026</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 4 Top Impact Pillars (Orange, Red, Pink/Purple, Violet/Green) -->
+        <div class="impact-pillars-quad-grid">
+          
+          <!-- Pillar 1: Impact of the Solution -->
+          <div class="pillar-card pillar-solution">
+            <div class="pillar-header-tag tag-solution">
+              <span class="pillar-dot-icon dot-orange"></span>
+              <span>Impact of the Solution</span>
+            </div>
+            <ul class="pillar-list">
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Faster AI Interaction</strong>
+                <p>Near-instant response streaming with zero queuing latency.</p>
+              </li>
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Better Decision Making</strong>
+                <p>Cross-validate code, analysis, and architecture in parallel.</p>
+              </li>
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Multiple AI Responses in One Place</strong>
+                <p>Consolidated multi-model output without tab switching.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2: Social Benefits -->
+          <div class="pillar-card pillar-social">
+            <div class="pillar-header-tag tag-social">
+              <span class="pillar-dot-icon dot-red"></span>
+              <span>👥 Social Benefits</span>
+            </div>
+            <ul class="pillar-list">
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Easy & Unified Access</strong>
+                <p>Democratizes premium LLMs for students, devs, and researchers.</p>
+              </li>
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Knowledge Empowerment</strong>
+                <p>Unlocks synthesis across math, humanities, code, and vision.</p>
+              </li>
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>User-Friendly Interaction</strong>
+                <p>Intuitive single interface engineered for zero learning curve.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3: Economic Benefits -->
+          <div class="pillar-card pillar-economic">
+            <div class="pillar-header-tag tag-economic">
+              <span class="pillar-dot-icon dot-pink"></span>
+              <span>Economic Benefits</span>
+            </div>
+            <ul class="pillar-list">
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Reduced AI Tool Switching</strong>
+                <p>Eliminates context loss and fragmented chat windows.</p>
+              </li>
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Time & Productivity Savings</strong>
+                <p>Saves 85% developer hours on evaluation and debugging.</p>
+              </li>
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Cost-Efficient AI Usage</strong>
+                <p>One unified membership replacing separate $20/mo subscriptions.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4: Environmental Benefits -->
+          <div class="pillar-card pillar-environmental">
+            <div class="pillar-header-tag tag-environmental">
+              <span class="pillar-dot-icon dot-green"></span>
+              <span>Environmental Benefits</span>
+            </div>
+            <ul class="pillar-list">
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Efficient Digital Workflow</strong>
+                <p>Smart model routing minimizes redundant cloud API pings.</p>
+              </li>
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Less Resource Wastage</strong>
+                <p>Synthesized prompt tokens prevent bloated context loops.</p>
+              </li>
+              <li>
+                <span class="bullet-glow"></span>
+                <strong>Sustainable AI Usage</strong>
+                <p>Optimized carbon footprint and compute energy efficiency.</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Bottom Split Grid: STATS Panel + D2D Chevron Flow Pipeline -->
+        <div class="impact-bottom-split-grid">
+          
+          <!-- Left: STATS Terminal Card -->
+          <div class="impact-stats-card">
+            <div class="stats-header-pill">
+              <i data-lucide="bar-chart-2" style="width: 14px; height: 14px; color: #38bdf8;"></i>
+              <span>📊 STATS & PERFORMANCE METRICS</span>
+            </div>
+            
+            <div class="stats-features-list">
+              <div class="stats-item">
+                <div class="stats-item-header">
+                  <span class="stats-emoji">⚡</span>
+                  <strong>Faster Productivity</strong>
+                </div>
+                <p class="stats-desc">Multiple AI responses can be viewed and compared from a single unified interface with real-time token telemetry.</p>
+              </div>
+
+              <div class="stats-item">
+                <div class="stats-item-header">
+                  <span class="stats-emoji">🤖</span>
+                  <strong>Multi-AI Interaction</strong>
+                </div>
+                <p class="stats-desc">One prompt → multiple AI providers → unified responses dispatched simultaneously with zero queuing overhead.</p>
+              </div>
+
+              <div class="stats-item">
+                <div class="stats-item-header">
+                  <span class="stats-emoji">🧠</span>
+                  <strong>Better Decision Making</strong>
+                </div>
+                <p class="stats-desc">Users can compare different AI answers before selecting the most useful, fact-checked, and hallucination-free response.</p>
+              </div>
+
+              <div class="stats-item">
+                <div class="stats-item-header">
+                  <span class="stats-emoji">💬</span>
+                  <strong>Improved User Experience</strong>
+                </div>
+                <p class="stats-desc">Prompt enhancement, synchronized chat history, and shared system context provide more consistent and powerful conversations.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive 6-Stage D2D Pipeline Chevron Process Flow -->
+          <div class="impact-pipeline-card">
+            
+            <div class="pipeline-header-bar">
+              <div class="pipeline-title-box">
+                <span class="pipe-eyebrow">D2D PIPELINE ARCHITECTURE</span>
+                <h4 class="pipe-heading">End-to-End Multi-AI Decision Journey</h4>
+              </div>
+              <span class="pipe-badge">USER INPUT ➔ OPTIMAL INSIGHT</span>
+            </div>
+
+            <!-- Chevron Flow Ribbon -->
+            <div class="chevron-flow-ribbon">
+              
+              <div class="chevron-step step-1">
+                <div class="chevron-top-meta">Easy AI Access:</div>
+                <div class="chevron-shape">
+                  <div class="chevron-num">01</div>
+                  <div class="chevron-name">Multi-AI Access</div>
+                  <i data-lucide="cpu" style="width: 14px; height: 14px;"></i>
+                </div>
+                <div class="chevron-bot-desc">Connects multiple AI providers in one unified platform.</div>
+              </div>
+
+              <div class="chevron-step step-2">
+                <div class="chevron-top-meta">Time Savings:</div>
+                <div class="chevron-shape">
+                  <div class="chevron-num">02</div>
+                  <div class="chevron-name">Unified Chat</div>
+                  <i data-lucide="message-square" style="width: 14px; height: 14px;"></i>
+                </div>
+                <div class="chevron-bot-desc">Single interface for simple and convenient interaction.</div>
+              </div>
+
+              <div class="chevron-step step-3">
+                <div class="chevron-top-meta">Zero Hallucinations:</div>
+                <div class="chevron-shape">
+                  <div class="chevron-num">03</div>
+                  <div class="chevron-name">Compare Responses</div>
+                  <i data-lucide="git-compare" style="width: 14px; height: 14px;"></i>
+                </div>
+                <div class="chevron-bot-desc">View answers side-by-side to identify the most accurate.</div>
+              </div>
+
+              <div class="chevron-step step-4">
+                <div class="chevron-top-meta">Context & Personalization:</div>
+                <div class="chevron-shape">
+                  <div class="chevron-num">04</div>
+                  <div class="chevron-name">Better Decisions</div>
+                  <i data-lucide="shield-check" style="width: 14px; height: 14px;"></i>
+                </div>
+                <div class="chevron-bot-desc">Multiple perspectives for improved answer reliability.</div>
+              </div>
+
+              <div class="chevron-step step-5">
+                <div class="chevron-top-meta">Higher Productivity:</div>
+                <div class="chevron-shape">
+                  <div class="chevron-num">05</div>
+                  <div class="chevron-name">Velocity Surge</div>
+                  <i data-lucide="zap" style="width: 14px; height: 14px;"></i>
+                </div>
+                <div class="chevron-bot-desc">Saves hours by eliminating repeated prompting.</div>
+              </div>
+
+              <div class="chevron-step step-6">
+                <div class="chevron-top-meta">Better AI Results:</div>
+                <div class="chevron-shape">
+                  <div class="chevron-num">06</div>
+                  <div class="chevron-name">Smart Experience</div>
+                  <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+                </div>
+                <div class="chevron-bot-desc">Personalized continuous interaction improvement.</div>
+              </div>
+
+            </div>
+
+            <!-- Flow Synthesis Footer -->
+            <div class="pipeline-footer-callout">
+              <span class="pulse-emerald-dot"></span>
+              <span><strong>SIH 2026 Deliverable:</strong> Reduces context loss by 94%, saves 4.5+ developer hrs/week, and drops compute energy usage.</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. ENTERPRISE BANNER SECTION (Screenshot 2 Match) -->
+    <section class="landing-enterprise-section" id="enterprise">
+      <div class="enterprise-banner-card">
+        <div class="enterprise-card-bg-mesh"></div>
+        <h2 class="enterprise-title">HackForge for Enterprise</h2>
+        <p class="enterprise-subtitle">Empower your entire engineering, research, and product team with unified AI comparison workflows and zero data training policies.</p>
+        
+        <div class="enterprise-cta-wrapper">
+          <button class="btn-enterprise-discovery" onclick="window.showWorkspace()">
+            <span>Book A Discovery Call</span>
+            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          </button>
+        </div>
+
+        <div class="enterprise-perks-row">
+          <div class="perk-item">24/7 Dedicated Support</div>
+          <span class="perk-sparkle">✦</span>
+          <div class="perk-item">Full Access To All Features</div>
+          <span class="perk-sparkle">✦</span>
+          <div class="perk-item">Best Price For Your Team</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FAQS ACCORDION SECTION (Screenshot 3 Match) -->
+    <section class="landing-faq-section" id="faqs">
+      <div class="section-header-center">
+        <h2 class="section-title-large">Frequently Asked Questions (FAQs)</h2>
+        <p class="section-subtitle">Everything you need to know about HackForge and multi-model intelligence.</p>
+      </div>
+
+      <div class="faq-accordion-container">
+        
+        <div class="faq-accordion-item active">
+          <button class="faq-question-btn" onclick="this.parentElement.classList.toggle('active')">
+            <span>How is HackForge different from subscribing to each AI separately?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </button>
+          <div class="faq-answer-body">
+            <p>Instead of switching between 4 different browser tabs and paying $20/month to OpenAI, $20 to Anthropic, and $20 to Google, HackForge combines all leading models into a single synchronized dashboard. You can prompt all of them at the exact same moment to compare answers side-by-side.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion-item">
+          <button class="faq-question-btn" onclick="this.parentElement.classList.toggle('active')">
+            <span>Can I choose which AI models to use?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </button>
+          <div class="faq-answer-body">
+            <p>Yes! Every column header features an instant On/Off toggle switch. You can compare 2, 3, or all 5 models simultaneously, or click the expand [↗] button on any model to chat exclusively with that single engine.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion-item">
+          <button class="faq-question-btn" onclick="this.parentElement.classList.toggle('active')">
+            <span>Do I get unlimited messages?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </button>
+          <div class="faq-answer-body">
+            <p>Guests receive 5 free full-comparison trial queries with zero credit card required. Creating a free account or upgrading to Pro unlocks unlimited queries and custom API key integration.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion-item">
+          <button class="faq-question-btn" onclick="this.parentElement.classList.toggle('active')">
+            <span>What happens if I run out of tokens?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </button>
+          <div class="faq-answer-body">
+            <p>You can seamlessly plug in your own API keys from OpenAI, Anthropic, Google AI, and DeepSeek in Settings for 100% direct at-cost billing with zero markup.</p>
+          </div>
+        </div>
+
+        <div class="faq-accordion-item">
+          <button class="faq-question-btn" onclick="this.parentElement.classList.toggle('active')">
+            <span>Do you offer enterprise security and privacy?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </button>
+          <div class="faq-answer-body">
+            <p>Absolutely. HackForge enforces zero-retention policies on client queries and never uses your code or prompts to train any foundation model.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. LANDING FOOTER -->
+    <footer class="landing-footer">
+      <div class="footer-inner-container">
+        <div class="footer-left">
+          <span class="brand-text hackforge-brand-text">HackForge<span class="brand-accent-tag">AI</span></span>
+          <p class="footer-tagline">Universal Multi-AI Intelligence Platform • Team HackForge</p>
+        </div>
+        <div class="footer-right">
+          <button class="btn-footer-cta" onclick="window.showWorkspace()">Launch Workspace →</button>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <span>© 2026 HackForge. Smart India Hackathon Prototype.</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ================= MAIN APP WORKSPACE ================= -->
+  <div class="app-shell" id="app-shell" style="display: none;">
+
+    <!-- 1. LEFT SIDEBAR (COLLAPSIBLE) -->
+    <aside class="sidebar-panel" id="sidebar-panel">
+      
+      <!-- Top Brand & Collapse Trigger -->
+      <div class="sidebar-top">
+        <a href="#landing" class="brand-wrapper" id="sidebar-brand-btn" onclick="window.showLanding(event)" title="Back to HackForge Landing Page">
+          <div class="brand-icon-box hackforge-logo-box">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hfGrad" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#00F2FE"/>
+                  <stop offset="45%" stop-color="#4FACFE"/>
+                  <stop offset="75%" stop-color="#8B5CF6"/>
+                  <stop offset="100%" stop-color="#EC4899"/>
+                </linearGradient>
+                <linearGradient id="hfFlame" x1="16" y1="6" x2="16" y2="26" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FDE047"/>
+                  <stop offset="50%" stop-color="#F97316"/>
+                  <stop offset="100%" stop-color="#EF4444"/>
+                </linearGradient>
+              </defs>
+              <path d="M16 2.5L27 7.5V17.5C27 23.5 22 28.5 16 30.5C10 28.5 5 23.5 5 17.5V7.5L16 2.5Z" stroke="url(#hfGrad)" stroke-width="2.2" fill="rgba(15, 23, 42, 0.7)"/>
+              <path d="M10 11H22M16 11V23M11 17H21M13 23H19M16 6.5L13.5 10H18.5L16 6.5Z" stroke="url(#hfFlame)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="11" r="1.5" fill="#00F2FE"/>
+              <circle cx="22" cy="11" r="1.5" fill="#EC4899"/>
+              <circle cx="16" cy="23" r="1.5" fill="#FDE047"/>
+            </svg>
+          </div>
+          <div class="hide-on-collapse">
+            <span class="brand-text hackforge-brand-text">HackForge<span class="brand-accent-tag">AI</span></span>
+          </div>
+        </a>
+        <button class="collapse-toggle-btn" id="sidebar-collapse-btn" title="Toggle Sidebar (Ctrl+B)">
+          <i data-lucide="panel-left-close" style="width: 18px; height: 18px;" id="collapse-icon"></i>
+        </button>
+      </div>
+
+      <!-- New Chat Button -->
+      <div class="new-chat-btn-container">
+        <button class="btn-new-chat fiesta-btn-new-chat" id="new-chat-btn">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <i data-lucide="plus" style="width: 16px; height: 16px;"></i>
+            <span class="hide-on-collapse">New Chat</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Projects Section Header -->
+      <div class="sidebar-section-header hide-on-collapse">
+        <span>Projects</span>
+        <button class="section-plus-btn" id="add-project-btn" title="New project">
+          <i data-lucide="plus" style="width: 12px; height: 12px;"></i>
+        </button>
+      </div>
+
+      <!-- Sidebar Search Filter -->
+      <div class="sidebar-search-container hide-on-collapse">
+        <div class="sidebar-search-box">
+          <i data-lucide="search" style="width: 13px; height: 13px; color: var(--text-muted); flex-shrink: 0;"></i>
+          <input type="text" id="sidebar-search-input" placeholder="Search chats..." autocomplete="off">
+          <button id="sidebar-search-clear" class="sidebar-search-clear" style="display: none;" title="Clear search">
+            <i data-lucide="x" style="width: 11px; height: 11px;"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat History List Grouped by Timeframe -->
+      <div class="sidebar-history-scroll" id="sidebar-history-list">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Bottom Free Plan Card in Sidebar -->
+      <div class="sidebar-free-plan-card hide-on-collapse" id="sidebar-free-plan-card">
+        <div class="free-plan-header">
+          <span class="free-plan-title">Free Plan</span>
+        </div>
+        <div class="free-plan-status" id="free-plan-status-text">5 of 5 messages remaining</div>
+        <div class="free-plan-progress-bar">
+          <div class="free-plan-progress-fill" id="free-plan-progress-fill" style="width: 0%;"></div>
+        </div>
+        <div class="free-plan-footer" id="free-plan-upgrade-link">Upgrade for unlimited messages</div>
+      </div>
+
+      <!-- User Profile & Logout UI in Sidebar -->
+      <div class="sidebar-bottom">
+        <div class="user-profile-bar" id="user-profile-btn" title="Click to view profile & settings">
+          <div class="user-avatar-badge" id="sidebar-user-avatar">✦</div>
+          <div class="hide-on-collapse" style="display: flex; flex-direction: column; overflow: hidden;">
+            <span class="user-name" id="sidebar-user-name">Guest Explorer</span>
+            <span class="user-email" id="sidebar-user-email">Free Trial Plan</span>
+          </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 0.2rem;" class="hide-on-collapse">
+          <button class="collapse-toggle-btn" id="open-settings-icon-btn" title="API Keys & Settings">
+            <i data-lucide="settings" style="width: 15px; height: 15px;"></i>
+          </button>
+          <button class="sidebar-logout-btn" id="sidebar-logout-btn" title="Sign Out">
+            <i data-lucide="log-out" style="width: 15px; height: 15px;"></i>
+          </button>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- 2. MAIN CHAT WINDOW -->
+    <main class="main-chat-viewport" id="main-chat-viewport">
+
+      <!-- Drag & Drop Overlay -->
+      <div class="drag-drop-overlay" id="drag-drop-overlay" style="display: none;">
+        <div class="drag-drop-modal">
+          <i data-lucide="upload-cloud" style="width: 36px; height: 36px; color: #6366f1;"></i>
+          <p style="font-size: 0.95rem; font-weight: 600; margin-top: 0.5rem;">Drop files to ingest into context</p>
+          <p style="font-size: 0.74rem; color: var(--text-muted); margin-top: 0.2rem;">Supports code, text, markdown, JSON, SQL, and CSV files</p>
+        </div>
+      </div>
+
+      <!-- Fixed Minimal Frosted Glass Top Header -->
+      <header class="chat-top-header">
+        <div class="header-left-zone">
+          <button class="collapse-toggle-btn show-on-collapse" id="mobile-sidebar-toggle">
+            <i data-lucide="menu" style="width: 18px; height: 18px;"></i>
+          </button>
+
+          <!-- Model Selector Dropdown with Provider Icons -->
+          <div class="model-dropdown-wrapper" id="model-dropdown-wrapper">
+            <button class="model-selector-trigger" id="model-selector-trigger">
+              <span class="model-avatar-icon" id="header-active-avatar"></span>
+              <span id="header-active-name">Claude 3.5 Sonnet</span>
+              <span class="stat-pill" id="header-active-speed" style="font-size: 0.68rem; color: var(--text-muted);">68 tok/s</span>
+              <i data-lucide="chevron-down" style="width: 13px; height: 13px; color: var(--text-muted);"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div class="model-dropdown-menu" id="model-dropdown-menu">
+              <!-- Rendered by app.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Header Right Actions & Mode Switcher -->
+        <div class="header-right-zone">
+          <button class="header-btn" id="header-back-to-landing-btn" title="Back to Landing Overview" onclick="window.showLanding(event)">
+            <i data-lucide="home" style="width: 14px; height: 14px;"></i>
+            <span style="font-size: 0.74rem;">Home</span>
+          </button>
+
+          <!-- 5-Chat Free Trial Counter Pill -->
+          <div class="trial-badge-pill" id="trial-counter-pill" title="Free trial queries remaining">
+            <span class="trial-pulse-dot"></span>
+            <span id="trial-count-text">5/5 Free Chats</span>
+            <button class="trial-signup-btn" id="trial-signup-btn" type="button">Sign Up</button>
+          </div>
+
+          <button class="arena-badge-pill" id="header-arena-toggle" title="Toggle Multi-Bot Split Arena">
+            <span id="arena-toggle-text">Multi-Bot Arena</span>
+          </button>
+
+          <button class="header-btn" id="command-palette-btn" title="Command Palette (Ctrl+K)">
+            <i data-lucide="command" style="width: 13px; height: 13px;"></i>
+            <span class="kbd-shortcut" style="font-size: 0.65rem;">⌘K</span>
+          </button>
+
+          <button class="header-btn" id="clear-current-thread-btn" title="Clear Conversation">
+            <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+          </button>
+
+          <button class="header-btn" id="export-thread-btn" title="Export Markdown">
+            <i data-lucide="download" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Message Area: Centered, Max-Width Container -->
+      <div class="messages-container-viewport" id="messages-viewport">
+        <div class="messages-max-width" id="messages-container">
+          <!-- Rendered messages or welcome hero -->
+        </div>
+      </div>
+
+      <!-- Bottom Pinned Floating Glassmorphic Input Bar -->
+      <div class="floating-input-wrapper">
+        <div class="floating-input-card">
+          
+          <!-- Attachment Preview Chips -->
+          <div class="attachment-preview-container" id="attachment-preview-container" style="display: none;"></div>
+
+          <div class="input-row-main">
+            <textarea 
+              id="main-chat-input" 
+              class="floating-textarea" 
+              rows="1" 
+              placeholder="Ask anything... (Shift+Enter for newline, ⌘K for commands)"
+            ></textarea>
+            
+            <button class="btn-send-gradient" id="main-send-btn" title="Send Prompt (Enter)">
+              <i data-lucide="arrow-up" style="width: 16px; height: 16px;"></i>
+            </button>
+          </div>
+
+          <!-- Hidden File Upload Input -->
+          <input type="file" id="file-upload-input" multiple accept=".txt,.json,.csv,.js,.ts,.jsx,.tsx,.py,.sql,.md,.html,.css,.xml,.yaml,.yml,.sh,.env,.log,.rs,.go,.java,.c,.cpp,.h,.graphql" style="display: none;">
+
+          <!-- Bottom Tools Strip -->
+          <div class="input-actions-strip">
+            <div class="input-left-tools">
+              <button class="tool-icon-btn" id="attach-file-btn" title="Upload Document / Code">
+                <i data-lucide="paperclip" style="width: 15px; height: 15px;"></i>
+              </button>
+              <button class="tool-icon-btn" id="voice-dictation-btn" title="Voice Input (Simulated)">
+                <i data-lucide="mic" style="width: 15px; height: 15px;"></i>
+              </button>
+              <button class="tool-icon-btn" id="open-prompts-btn" title="Prompt Library">
+                <i data-lucide="sparkles" style="width: 15px; height: 15px;"></i>
+              </button>
+            </div>
+
+            <div class="active-model-tag-pill" id="floating-model-indicator">
+              <span id="floating-model-dot" style="width: 5px; height: 5px; border-radius: 50%; background: #d97706;"></span>
+              <span id="floating-model-name">Claude 3.5 Sonnet</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- ================= 3. COMMAND PALETTE MODAL (⌘K / Ctrl+K) ================= -->
+  <div class="modal-backdrop" id="command-palette-modal">
+    <div class="command-palette-card">
+      <div class="command-search-bar">
+        <i data-lucide="search" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+        <input type="search" id="command-palette-input" placeholder="Type a command, model name, or prompt..." autofocus>
+        <span class="kbd-shortcut">ESC</span>
+      </div>
+      <div class="command-results-list" id="command-results-list"></div>
+    </div>
+  </div>
+
+  <!-- ================= 4. SETTINGS & BYOK MODAL ================= -->
+  <div class="modal-backdrop" id="settings-modal">
+    <div class="command-palette-card" style="max-width: 560px; padding: 1.5rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+        <h3 style="font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="key" style="color: #f59e0b; width: 18px; height: 18px;"></i>
+          API Keys & Preferences
+        </h3>
+        <button class="collapse-toggle-btn" id="close-settings-modal-btn">
+          <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+        </button>
+      </div>
+
+      <form id="modal-api-keys-form" style="display: flex; flex-direction: column; gap: 0.85rem;">
+        <div>
+          <label style="font-size: 0.76rem; font-weight: 600; color: #06b6d4; display: block; margin-bottom: 0.25rem;">Perplexity API Key</label>
+          <input type="password" id="modal-key-perplexity" class="auth-input" style="padding-left: 0.85rem;" placeholder="pplx-xxxxxxxxxxxxxxxxxxxxxxxx">
+        </div>
+        <div>
+          <label style="font-size: 0.76rem; font-weight: 600; color: #f59e0b; display: block; margin-bottom: 0.25rem;">Anthropic Claude API Key</label>
+          <input type="password" id="modal-key-claude" class="auth-input" style="padding-left: 0.85rem;" placeholder="sk-ant-api03-xxxxxxxxxxxxxxxx">
+        </div>
+        <div>
+          <label style="font-size: 0.76rem; font-weight: 600; color: #6366f1; display: block; margin-bottom: 0.25rem;">Google Gemini API Key</label>
+          <input type="password" id="modal-key-gemini" class="auth-input" style="padding-left: 0.85rem;" placeholder="AIzaSyxxxxxxxxxxxxxxxxxxxxxxx">
+        </div>
+        <div>
+          <label style="font-size: 0.76rem; font-weight: 600; color: #10b981; display: block; margin-bottom: 0.25rem;">OpenAI GPT API Key</label>
+          <input type="password" id="modal-key-openai" class="auth-input" style="padding-left: 0.85rem;" placeholder="sk-proj-xxxxxxxxxxxxxxxxxxxxxxx">
+        </div>
+        <div>
+          <label style="font-size: 0.76rem; font-weight: 600; color: #ec4899; display: block; margin-bottom: 0.25rem;">Ollama Local LLM Endpoint</label>
+          <input type="text" id="modal-key-ollama-url" class="auth-input" style="padding-left: 0.85rem;" placeholder="http://localhost:11434">
+        </div>
+        <div>
+          <label style="font-size: 0.76rem; font-weight: 600; color: #ec4899; display: block; margin-bottom: 0.25rem;">Ollama Model Name</label>
+          <input type="text" id="modal-key-ollama-model" class="auth-input" style="padding-left: 0.85rem;" placeholder="llama3 / deepseek-r1 / mistral">
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border-subtle);">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="checkbox" id="modal-live-mode-check" style="accent-color: #6366f1; width: 15px; height: 15px;">
+            <label for="modal-live-mode-check" style="font-size: 0.78rem; color: var(--text-secondary); cursor: pointer;">Direct Live / Ollama API Calls</label>
+          </div>
+          <button type="submit" class="btn-auth-submit" style="width: auto; padding: 0.45rem 1.15rem; font-size: 0.8rem;">
+            Save Settings
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Stack -->
+  <div class="toast-stack" id="toast-stack"></div>
+
+  <!-- Application Logic Module -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
